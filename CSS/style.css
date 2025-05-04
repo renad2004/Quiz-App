@@ -1,0 +1,169 @@
+:root {
+  --main-color: #ef5e23;
+  --animate-duration: 800ms;
+}
+
+body {
+  min-height: 100vh;
+  background-size: 30%;
+  background-color: #330055;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 1000'%3E%3Cg %3E%3Ccircle fill='%23330055' cx='50' cy='0' r='50'/%3E%3Cg fill='%233a015d' %3E%3Ccircle cx='0' cy='50' r='50'/%3E%3Ccircle cx='100' cy='50' r='50'/%3E%3C/g%3E%3Ccircle fill='%23410165' cx='50' cy='100' r='50'/%3E%3Cg fill='%2348026e' %3E%3Ccircle cx='0' cy='150' r='50'/%3E%3Ccircle cx='100' cy='150' r='50'/%3E%3C/g%3E%3Ccircle fill='%23500376' cx='50' cy='200' r='50'/%3E%3Cg fill='%2357047e' %3E%3Ccircle cx='0' cy='250' r='50'/%3E%3Ccircle cx='100' cy='250' r='50'/%3E%3C/g%3E%3Ccircle fill='%235f0587' cx='50' cy='300' r='50'/%3E%3Cg fill='%2367068f' %3E%3Ccircle cx='0' cy='350' r='50'/%3E%3Ccircle cx='100' cy='350' r='50'/%3E%3C/g%3E%3Ccircle fill='%236f0798' cx='50' cy='400' r='50'/%3E%3Cg fill='%237707a0' %3E%3Ccircle cx='0' cy='450' r='50'/%3E%3Ccircle cx='100' cy='450' r='50'/%3E%3C/g%3E%3Ccircle fill='%238008a9' cx='50' cy='500' r='50'/%3E%3Cg fill='%238909b1' %3E%3Ccircle cx='0' cy='550' r='50'/%3E%3Ccircle cx='100' cy='550' r='50'/%3E%3C/g%3E%3Ccircle fill='%239109ba' cx='50' cy='600' r='50'/%3E%3Cg fill='%239a09c3' %3E%3Ccircle cx='0' cy='650' r='50'/%3E%3Ccircle cx='100' cy='650' r='50'/%3E%3C/g%3E%3Ccircle fill='%23a309cb' cx='50' cy='700' r='50'/%3E%3Cg fill='%23ad09d4' %3E%3Ccircle cx='0' cy='750' r='50'/%3E%3Ccircle cx='100' cy='750' r='50'/%3E%3C/g%3E%3Ccircle fill='%23b608dc' cx='50' cy='800' r='50'/%3E%3Cg fill='%23c007e5' %3E%3Ccircle cx='0' cy='850' r='50'/%3E%3Ccircle cx='100' cy='850' r='50'/%3E%3C/g%3E%3Ccircle fill='%23c905ee' cx='50' cy='900' r='50'/%3E%3Cg fill='%23d303f6' %3E%3Ccircle cx='0' cy='950' r='50'/%3E%3Ccircle cx='100' cy='950' r='50'/%3E%3C/g%3E%3Ccircle fill='%23D0F' cx='50' cy='1000' r='50'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: contain;
+  font-family: "Changa", sans-serif;
+  overflow: hidden;
+}
+
+/* ======> Global Rules */
+.bg-main {
+  background-color: var(--main-color);
+}
+
+.text-main {
+  color: var(--main-color);
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.correct,
+.correct:hover {
+  --main-color: #7cb518 !important;
+  background-color: var(--main-color);
+  color: #fff !important;
+}
+
+.wrong,
+.wrong:hover {
+  --main-color: #bf0603 !important;
+  background-color: var(--main-color);
+  color: #fff !important;
+}
+
+.score-color {
+  color: #434371;
+}
+.btn-category {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #a1c349;
+  --bs-btn-border-color: #a1c349;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #a1c349;
+  --bs-btn-hover-border-color: #a1c349;
+}
+
+.btn-questions,
+.btn-start {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #38369a;
+  --bs-btn-border-color: #38369a;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #4c4aae;
+  --bs-btn-hover-border-color: #4c4aae;
+}
+
+/* ======> Question Card */
+.heading {
+  --radius: 10px;
+  width: fit-content;
+  padding: 6px;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  border-radius: var(--radius);
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.heading h1 {
+  font-size: 50px;
+  padding: 15px;
+  background-image: linear-gradient(30deg, #eee, #fff);
+  font-family: "Electrolize", sans-serif;
+  border-radius: inherit;
+}
+
+.heading::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: -5px;
+  top: -5px;
+  transform: scale(2) translate(-50%, -50%);
+  scale: 1.1;
+  background-image: conic-gradient(#fc5130, #613dc1);
+  animation: spinning 7s infinite linear;
+  z-index: -1;
+  border-radius: inherit;
+  -webkit-transform: scale(2) translate(-50%, -50%);
+  -moz-transform: scale(2) translate(-50%, -50%);
+  -ms-transform: scale(2) translate(-50%, -50%);
+  -o-transform: scale(2) translate(-50%, -50%);
+}
+
+@keyframes spinning {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(45deg);
+  }
+  75% {
+    transform: rotate(315deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate__animated.animate__zoomInDown {
+  --animate-duration: 1s;
+}
+
+.animate__animated.animate__fadeInBottomLeft {
+  --animate-duration: 1s;
+  --animate-delay: 1s;
+}
+/* ======> Question Card */
+.question {
+  background-color: #fff;
+  position: relative;
+}
+
+.question h2 {
+  font-family: "Dosis", sans-serif;
+  font-weight: 600;
+}
+
+.choices {
+  gap: 10px;
+}
+
+.choices li {
+  --main-color: #434371;
+  width: calc((100% - 10px) / 2);
+  font-size: 19px;
+  font-weight: 600;
+  border-radius: 100vh;
+  border: 2px solid var(--main-color);
+  color: var(--main-color);
+  padding: 5px 12px;
+  transition: background-color 350ms, color 350ms;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.choices li:hover {
+  background-color: var(--main-color);
+  color: #f1f1f1;
+}
+
+.question i {
+  cursor: pointer;
+}
